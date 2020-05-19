@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="4wheel_ball">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.142291268345538 0.108885138044595 0.08156562606571"
+        rpy="0 0 0" />
+      <mass
+        value="5.32485366509132" />
+      <inertia
+        ixx="0.0149048926646327"
+        ixy="-1.47975198131889E-06"
+        ixz="-8.06521337684515E-06"
+        iyy="0.0219378727233068"
+        iyz="-4.01751561825294E-06"
+        izz="0.0232029020939229" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel_ball/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel_ball/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="right_front_suspension">
+    <inertial>
+      <origin
+        xyz="0.072447 -0.0024231 -0.066755"
+        rpy="0 0 0" />
+      <mass
+        value="0.26437" />
+      <inertia
+        ixx="3.2075E-05"
+        ixy="1.4412E-07"
+        ixz="6.3085E-08"
+        iyy="6.227E-05"
+        iyz="-2.0189E-07"
+        izz="6.2852E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel_ball/meshes/right_front_suspension.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel_ball/meshes/right_front_suspension.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_front_suspension"
+    type="prismatic">
+    <origin
+      xyz="-0.012128 -0.10492 -0.047207"
+      rpy="2.834 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_front_suspension" />
+    <axis
+      xyz="0 0.3028 -0.95305" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right_front_wheel">
+    <inertial>
+      <origin
+        xyz="0.014171 0 -1.3878E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.23877" />
+      <inertia
+        ixx="0.00029907"
+        ixy="-3.9522E-37"
+        ixz="6.92E-37"
+        iyy="0.00016737"
+        iyz="-8.4703E-22"
+        izz="0.00016737" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel_ball/meshes/right_front_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel_ball/meshes/right_front_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_front_wheel"
+    type="continuous">
+    <origin
+      xyz="0 0.00097405 -0.03369"
+      rpy="-1.3077 0 0" />
+    <parent
+      link="right_front_suspension" />
+    <child
+      link="right_front_wheel" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="3.1"
+      velocity="7" />
+  </joint>
+  <link
+    name="left_front_suspension">
+    <inertial>
+      <origin
+        xyz="0.066688 0.0036428 -0.064837"
+        rpy="0 0 0" />
+      <mass
+        value="0.26437" />
+      <inertia
+        ixx="3.2075E-05"
+        ixy="-1.4412E-07"
+        ixz="-6.3085E-08"
+        iyy="6.227E-05"
+        iyz="-2.0189E-07"
+        izz="6.2852E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel_ball/meshes/left_front_suspension.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel_ball/meshes/left_front_suspension.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_front_suspension"
+    type="prismatic">
+    <origin
+      xyz="-0.050812 0.31516 -0.047207"
+      rpy="2.834 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_front_suspension" />
+    <axis
+      xyz="0 0.3028 -0.95305" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_front_wheel">
+    <inertial>
+      <origin
+        xyz="-0.008411 -1.3878E-17 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.23877" />
+      <inertia
+        ixx="0.00029907"
+        ixy="3.5444E-22"
+        ixz="-1.8433E-21"
+        iyy="0.00016737"
+        iyz="6.7763E-21"
+        izz="0.00016737" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel_ball/meshes/left_front_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel_ball/meshes/left_front_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_front_wheel"
+    type="continuous">
+    <origin
+      xyz="0 -0.018219 -0.039786"
+      rpy="-0.026787 0 3.1416" />
+    <parent
+      link="left_front_suspension" />
+    <child
+      link="left_front_wheel" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="3.1"
+      velocity="7" />
+  </joint>
+  <link
+    name="right_back_suspension">
+    <inertial>
+      <origin
+        xyz="-0.0067868 0.020675 0.059195"
+        rpy="0 0 0" />
+      <mass
+        value="0.11411" />
+      <inertia
+        ixx="7.8941E-05"
+        ixy="5.5532E-22"
+        ixz="1.1472E-06"
+        iyy="5.1512E-05"
+        iyz="5.8797E-21"
+        izz="7.839E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel_ball/meshes/right_back_suspension.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel_ball/meshes/right_back_suspension.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_back_suspension"
+    type="prismatic">
+    <origin
+      xyz="-0.24766 -0.12539 0"
+      rpy="-1.5708 0 -0.67945" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_back_suspension" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_back_suspension">
+    <inertial>
+      <origin
+        xyz="-0.0067868 0.020675 0.059195"
+        rpy="0 0 0" />
+      <mass
+        value="0.11411" />
+      <inertia
+        ixx="7.8941E-05"
+        ixy="1.7655E-21"
+        ixz="1.1472E-06"
+        iyy="5.1512E-05"
+        iyz="3.4905E-21"
+        izz="7.839E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel_ball/meshes/left_back_suspension.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel_ball/meshes/left_back_suspension.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_back_suspension"
+    type="prismatic">
+    <origin
+      xyz="-0.18234 0.34139 0"
+      rpy="-1.5708 0 2.4621" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_back_suspension" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="cam1">
+    <inertial>
+      <origin
+        xyz="0.049836 0.061784 0.068723"
+        rpy="0 0 0" />
+      <mass
+        value="0.043612" />
+      <inertia
+        ixx="4.2948E-06"
+        ixy="-8.8548E-10"
+        ixz="-1.0183E-09"
+        iyy="2.2106E-05"
+        iyz="2.1758E-08"
+        izz="2.3571E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel_ball/meshes/cam1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel_ball/meshes/cam1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cam1"
+    type="fixed">
+    <origin
+      xyz="-0.10428 0.058165 0.12322"
+      rpy="2.3562 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="cam1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="cam2">
+    <inertial>
+      <origin
+        xyz="0.051723 0.061784 0.068723"
+        rpy="0 0 0" />
+      <mass
+        value="0.043612" />
+      <inertia
+        ixx="4.2948E-06"
+        ixy="-8.8579E-10"
+        ixz="-1.0181E-09"
+        iyy="2.2106E-05"
+        iyz="2.1758E-08"
+        izz="2.3571E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel_ball/meshes/cam2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel_ball/meshes/cam2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cam2"
+    type="prismatic">
+    <origin
+      xyz="-0.080078 0.038079 0.092502"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="cam2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="lidar">
+    <inertial>
+      <origin
+        xyz="-0.09228 0.74443 0.065856"
+        rpy="0 0 0" />
+      <mass
+        value="0.073085" />
+      <inertia
+        ixx="1.9581E-05"
+        ixy="-4.284E-07"
+        ixz="1.0393E-07"
+        iyy="4.1418E-05"
+        iyz="-9.4012E-09"
+        izz="2.4125E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel_ball/meshes/lidar.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://4wheel_ball/meshes/lidar.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar"
+    type="prismatic">
+    <origin
+      xyz="-0.1518 0.076069 -0.5487"
+      rpy="1.5708 0 2.9404" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar" />
+    <axis
+      xyz="0.19986 0 0.97983" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
